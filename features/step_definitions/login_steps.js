@@ -11,15 +11,19 @@ const { By, until, key } = require('selenium-webdriver');
 //   });
 // });
 
-Given('I am logged in using credentials username={string} and password={string}', function (username, password) {
+Given('I am logged in using credentials {string} {string}', function (username, password) {
   this.driver.get(this.domainUrl);
-  this.driver.wait(until.elementsLocated(By.id('topbar-login-link'))).then(() => {
-    this.driver.findElements(By.id('topbar-login-link')).click();
-    this.driver.findElements(By.id('siginField')).sendKeys(username);
-    this.driver.findElements(By.id('password')).sendKeys(password);
-    this.driver.findElements(By.id('siginButtonSend')).click();
+  return this.driver.wait(until.elementsLocated(By.id('topbar-login-link'))).then(() => {
+    this.driver.findElement(By.id('topbar-login-link')).click();
+    this.driver.wait(until.elementsLocated(By.xpath('signinField')));
+    this.driver.wait(until.elementsLocated(By.id('password')));
+    this.driver.wait(until.elementsLocated(By.id('siginButtonSend')));
+    this.driver.findElement(By.id('signinField')).sendKeys(username);
+    this.driver.findElement(By.id('password')).sendKeys(password);
+    this.driver.findElement(By.id('siginButtonSend')).click();
+    return this.driver.wait(until.elementsLocated(By.id('suggestion-search')));
   }).then(function (element) {
-    this.element = this.driver.findElements(By.id('suggestion-search')).getText();
-    assert.equal(element, 'Olá, User. O que você procura?');
+    //assert.equal(element, 'Olá, User. O que você procura?');
+    assert.notEqual(element.length, 0, 'campo de busca nao esta presente');
   });
 });
