@@ -3,8 +3,7 @@ Feature: Buy a Product
    As a costumer accessing an e-commerce website, I want be able to buy a product.
 
    Background:
-   Given The e-commerce website is acessible
-   And I am logged into the e-commerce website
+   Given I am logged in using credentials username="75676513195" and password="pwdteste"
 
    Scenario: Successfull Purchase 
    Given I had successfully added a product to my cart
