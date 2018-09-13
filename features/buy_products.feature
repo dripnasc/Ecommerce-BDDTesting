@@ -20,7 +20,6 @@ Feature: Buy a Product
     #Then A confirmation message is shown
     #And My purchase id is informed
 
-
     Examples:
       | product              | productTitle                                         | quantity |
       | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 1        |

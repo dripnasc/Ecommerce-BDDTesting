@@ -3,7 +3,7 @@ const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
 
-//Scenario: Loading page of a searched product successfully
+//Scenario: Successfully Loading page of a searched product
 When('I access the product\'s page', async function () {
   await this.driver.findElement(By.className('product-title')).click();
   await this.driver.findElement(By.className('product-name')).isDisplayed();

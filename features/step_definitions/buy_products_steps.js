@@ -2,6 +2,7 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
+
 //Scenario: Successful Purchase using credit card
 When('I am accessing my cart page', async function () {
   await this.driver.findElement(By.className('cart')).click();
@@ -23,15 +24,12 @@ When('I confirm product={string} and quantity={int} at my purchase summary', asy
   await this.driver.findElement(By.className('product-list-item')).isDisplayed();
   const summaryTitle = await this.driver.findElement(By.className('product-text')).getText();
   assert.equal(summaryTitle, productTitle);
-
   //confirming quantity
   const summaryQnt = await this.driver.findElement(By.className('product-item-quantity')).getText();
   assert.equal(summaryQnt, quantity + 'x');
-
   //Proceeding
   await this.driver.findElement(By.className('btn btn-success')).click();
 });
-
 
 Then('Credit card payment option is displayed', async function () {
   await this.driver.sleep(10000);

@@ -5,7 +5,7 @@ Feature: Search for products
   Background:
     Given I am logged in using credentials "User" "75676513195" "pwdteste"
 
-  Scenario Outline: Successfull search of an existing product
+  Scenario Outline: Successful search of an existing product
     Given The product's name <product> is searched
     When I access the product's page
     Then The product <productTitle> is shown

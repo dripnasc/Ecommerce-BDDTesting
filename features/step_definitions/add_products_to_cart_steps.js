@@ -2,6 +2,7 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
+
 //Scenario Outline: Successfully adding several items of a product to cart
 Given('I had added {int} items of the product to my cart', async function (quantity) {
   const plusBtn = await this.driver.findElement(By.className('adds track-satellite-oneclick'));
@@ -17,7 +18,6 @@ Then('The product can be seen on my cart', async function () {
   const productNameDescription = await this.driver.findElement(By.className('link link-description')).getText();
   assert.equal(productNameDescription, "Chocolate Bombom Sonho De Valsa Pacote 1kg");
 });
-
 
 Then('The quantity {int} added is correctly shown in the cart', async function (qntAdded) {
   const qntCartShowing = await this.driver.findElement(By.className('quantity-spinner ui-spinner-input')).getAttribute('value');

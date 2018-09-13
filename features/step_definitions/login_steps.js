@@ -2,6 +2,8 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
+
+//Login Background
 Given('I am logged in using credentials {string} {string} {string}', async function (firstname, login, password) {
   await this.driver.get(this.domainUrl);
   await this.driver.findElement(By.id('topbar-login-link')).click();
