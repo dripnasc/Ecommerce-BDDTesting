@@ -21,7 +21,7 @@ When('I confirm product={string} and quantity={int} at my purchase summary', asy
   //confirming name
   await this.driver.sleep(10000);
   await this.driver.findElement(By.className('product-list-item')).isDisplayed();
-  const summaryTitle = await this.driver.findElement(By.className('product-text')).getText();  
+  const summaryTitle = await this.driver.findElement(By.className('product-text')).getText();
   assert.equal(summaryTitle, productTitle);
 
   //confirming quantity
