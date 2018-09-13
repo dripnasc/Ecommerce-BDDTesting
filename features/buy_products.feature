@@ -4,7 +4,9 @@ Feature: Buy a Product
 
   Background:
     Given I am logged in using credentials "User" "75676513195" "pwdteste"
-    And I had successfully added a product to my cart
+    And The product "sonho de valsa 1kg" has been searched
+    And I accessed the product's page
+    And I had added the product to my cart
 
   Scenario: Successfull Purchase using credit card
     Given I am accessing my cart page

@@ -2,8 +2,8 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
-//Given I am at the product\'s page'
-Given('I am at the product\'s page', async function () {
+//Given I accessed the product\'s page'
+Given('I accessed the product\'s page', async function () {
   await this.driver.findElement(By.className('product-title')).click();
   await this.driver.findElement(By.className('product-name')).isDisplayed();
 });
