@@ -3,7 +3,7 @@ Feature: Buy a Product
   As a costumer accessing an e-commerce website, I want be able to buy a product.
 
   Background:
-    Given I am logged in using credentials "User" "75676513195" "pwdteste"
+    Given I am logged with "User" using login="75676513195" and password="pwdteste"
 
   Scenario Outline: Successful Purchase using credit card
     Given The product's name <product> is searched

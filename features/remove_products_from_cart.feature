@@ -3,7 +3,7 @@ Feature: Remove products to cart
   As a costumer, I want to be able to remove products I had added to my cart.
 
   Background:
-    Given I am logged in using credentials "User" "75676513195" "pwdteste"
+    Given I am logged with "User" using login="75676513195" and password="pwdteste"
 
   Scenario Outline: Successfully removing product from cart containing one product
     Given The product's name <product> is searched

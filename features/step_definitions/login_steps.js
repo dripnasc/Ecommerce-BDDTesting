@@ -4,7 +4,7 @@ const { By, until, key } = require('selenium-webdriver');
 
 
 //Login Background
-Given('I am logged in using credentials {string} {string} {string}', async function (firstname, login, password) {
+Given('I am logged with {string} using login={string} and password={string}', async function (firstname, login, password) {
   await this.driver.get(this.domainUrl);
   await this.driver.findElement(By.id('topbar-login-link')).click();
   this.driver.switchTo().frame('iframeLogin');
