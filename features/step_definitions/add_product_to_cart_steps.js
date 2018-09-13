@@ -17,5 +17,4 @@ When('I select {int} of this product', async function (quantity) {
 
 When('I click to add the product to my cart', async function () {
   await this.driver.findElement(By.className('button-success button-pill right buy-button buy-button-product fluid')).click();
-  await this.driver.sleep (10000);
 });

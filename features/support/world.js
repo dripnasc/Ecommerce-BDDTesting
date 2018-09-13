@@ -10,6 +10,7 @@ const world = function () {
 
   const screenshotPath = 'screenshots';
   this.driver = buildDriver();
+  this.driver.manage().window().maximize();
   this.domainUrl = 'https://www.walmart.com.br';
 
   if (!fs.existsSync(screenshotPath)) {
