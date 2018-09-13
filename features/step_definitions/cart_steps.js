@@ -2,20 +2,12 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
-Given ('I had added the product to my cart', async function (){
-  await this.driver.findElement(By.className('button-success button-pill right buy-button buy-button-product fluid')).click();
-});
-
-//Scenario Outline: Add <quantity> items of product to cart
-When('I select {int} of this product', async function (quantity) {
+//Scenario Outline: Successfully adding several items of a product to cart
+Given('I had added {int} items of the product to my cart', async function (quantity) {
   const plusBtn = await this.driver.findElement(By.className('adds track-satellite-oneclick'));
   for (click = 0; click < quantity - 1; click++) {
     plusBtn.click();
   }
-});
-
-
-When('I click to add the product to my cart', async function () {
   await this.driver.findElement(By.className('button-success button-pill right buy-button buy-button-product fluid')).click();
 });
 

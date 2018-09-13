@@ -2,8 +2,8 @@ const assert = require('assert');
 const { Given, When, Then } = require('cucumber');
 const { By, until, key } = require('selenium-webdriver');
 
-//Scenario: Successfull Purchase
-Given('I am accessing my cart page', async function () {
+//Scenario: Successful Purchase using credit card
+When('I am accessing my cart page', async function () {
   await this.driver.findElement(By.className('cart')).click();
   await this.driver.findElement(By.className('my-cart-header-title')).isDisplayed();
 });
@@ -12,38 +12,28 @@ When('I proceed to Check Out', async function () {
   await this.driver.findElement(By.id('btn-finalize-cart')).click();
 });
 
-When('I select a shipping address', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+When('I select a shipping address', async function () {
+  await this.driver.findElement(By.className('address-data')).click();
+  await this.driver.findElement(By.className('btn btn-success')).click();
 });
 
-Then('Credit card payment option is displayed', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+When('I confirm product={string} and quantity={int} at my purchase summary', async function (productTitle, quantity) {
+  //confirming name
+  await this.driver.sleep(10000);
+  await this.driver.findElement(By.className('product-list-item')).isDisplayed();
+  const summaryTitle = await this.driver.findElement(By.className('product-text')).getText();  
+  assert.equal(summaryTitle, productTitle);
+
+  //confirming quantity
+  const summaryQnt = await this.driver.findElement(By.className('product-item-quantity')).getText();
+  assert.equal(summaryQnt, quantity + 'x');
+
+  //Proceeding
+  await this.driver.findElement(By.className('btn btn-success')).click();
 });
 
-//Scenario: Empty Payment Method
-Given('I had proceeded to Check Out', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
-});
 
-Given('I had select a shipping address', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
-});
-
-When('I try to confirm operation without selecting a payment method', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
-});
-
-Then('Required fields will be highlighted', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
-});
-
-Then('I won\'t be able to confirm the purchase', function () {
-  // Write code here that turns the phrase above into concrete actions
-  return 'pending';
+Then('Credit card payment option is displayed', async function () {
+  await this.driver.sleep(10000);
+  await this.driver.findElement(By.className('wm-icon-credit-card-active')).isDisplayed();
 });
