@@ -13,6 +13,6 @@ Feature: Remove products to cart
     And I click to remove the product
     Then I will be informed my cart is empty
 
-  Examples:
+    Examples:
       | product              | productTitle                                         | quantity |
       | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |

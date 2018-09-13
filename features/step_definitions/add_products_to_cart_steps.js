@@ -12,11 +12,11 @@ Given('I had added {int} items of the product to my cart', async function (quant
   await this.driver.findElement(By.className('button-success button-pill right buy-button buy-button-product fluid')).click();
 });
 
-Then('The product can be seen on my cart', async function () {
+Then('The product {string} can be seen on my cart', async function (productTitle) {
   await this.driver.findElement(By.className('cart')).click();
   await this.driver.findElement(By.className('my-cart-header-title')).isDisplayed();
   const productNameDescription = await this.driver.findElement(By.className('link link-description')).getText();
-  assert.equal(productNameDescription, "Chocolate Bombom Sonho De Valsa Pacote 1kg");
+  assert.equal(productNameDescription, productTitle);
 });
 
 Then('The quantity {int} added is correctly shown in the cart', async function (qntAdded) {

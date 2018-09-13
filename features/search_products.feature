@@ -6,6 +6,9 @@ Feature: Search for products
     Given I am logged in using credentials "User" "75676513195" "pwdteste"
 
   Scenario Outline: Successful search of an existing product
-    Given The product's name <product> is searched
-    When I access the product's page
+    When The product's name <product> is searched
     Then The product <productTitle> is shown
+
+    Examples:
+      | product                         | productTitle                                              |
+      | "marcador magic color 36 cores" | "Marcador Magic Color Série Ouro 36 Cores Sortidas 648-O" |
