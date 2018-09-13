@@ -18,13 +18,13 @@ Feature: Buy a Product
     #And My purchase id is informed
 
 
-  Scenario: Empty Payment Method
-    Given I am accessing my cart page
-    And I had proceeded to Check Out
-    And I had select a shipping address
-    When I try to confirm operation without selecting a payment method
-    Then Required fields will be highlighted
-    And I won't be able to confirm the purchase
+  # Scenario: Empty Payment Method
+  #   Given I am accessing my cart page
+  #   And I had proceeded to Check Out
+  #   And I had select a shipping address
+  #   When I try to confirm operation without selecting a payment method
+  #   Then Required fields will be highlighted
+  #   And I won't be able to confirm the purchase
 
 
 
