@@ -4,7 +4,7 @@ const { By, until, key } = require('selenium-webdriver');
 
 
 //Scenario Outline: Successfully adding several items of a product to cart
-Given('I had added {int} items of the product to my cart', async function (quantity) {
+Given('I add {int} items of the product to my cart', async function (quantity) {
   const plusBtn = await this.driver.findElement(By.className('adds track-satellite-oneclick'));
   for (click = 0; click < quantity - 1; click++) {
     plusBtn.click();
@@ -14,6 +14,7 @@ Given('I had added {int} items of the product to my cart', async function (quant
 
 Then('The product {string} can be seen on my cart', async function (productTitle) {
   await this.driver.findElement(By.className('cart')).click();
+  await this.driver.wait(until.elementLocated(By.className('my-cart-header-title'), 10000));
   await this.driver.findElement(By.className('my-cart-header-title')).isDisplayed();
   const productNameDescription = await this.driver.findElement(By.className('link link-description')).getText();
   assert.equal(productNameDescription, productTitle);

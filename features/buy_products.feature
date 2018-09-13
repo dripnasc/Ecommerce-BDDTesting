@@ -8,8 +8,8 @@ Feature: Buy a Product
   Scenario Outline: Successful Purchase using credit card
     Given The product's name <product> is searched
     And I access the product's page
-    And I had added <quantity> items of the product to my cart
-    When I am accessing my cart page
+    And I add <quantity> items of the product to my cart
+    When I access my cart page
     And I proceed to Check Out
     And I select a shipping address
     And I confirm product=<productTitle> and quantity=<quantity> at my purchase summary

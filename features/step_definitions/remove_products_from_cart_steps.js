@@ -9,7 +9,7 @@ When('I click to remove the product', async function () {
 });
 
 Then('I will be informed my cart is empty', async function () {
-  await this.driver.sleep(10000);
+  await this.driver.wait(until.elementLocated(By.className('subtitle'), 10000));
   const message = await this.driver.findElement(By.className('subtitle')).getText();
   assert.equal(message, "Seu carrinho está vazio");
 });

@@ -8,7 +8,7 @@ Feature: Add products to cart
   Scenario Outline: Successfully adding several items of a product to cart
     Given The product's name <product> is searched
     And I access the product's page
-    And I had added <quantity> items of the product to my cart
+    And I add <quantity> items of the product to my cart
     Then The product <productTitle> can be seen on my cart
     And The quantity <quantity> added is correctly shown in the cart
 

@@ -4,7 +4,7 @@ const { By, until, key } = require('selenium-webdriver');
 
 
 //Scenario: Successful Purchase using credit card
-When('I am accessing my cart page', async function () {
+When('I access my cart page', async function () {
   await this.driver.findElement(By.className('cart')).click();
   await this.driver.findElement(By.className('my-cart-header-title')).isDisplayed();
 });
@@ -20,7 +20,7 @@ When('I select a shipping address', async function () {
 
 When('I confirm product={string} and quantity={int} at my purchase summary', async function (productTitle, quantity) {
   //confirming name
-  await this.driver.sleep(10000);
+  await this.driver.wait(until.elementLocated(By.className('product-list-item'), 10000));
   await this.driver.findElement(By.className('product-list-item')).isDisplayed();
   const summaryTitle = await this.driver.findElement(By.className('product-text')).getText();
   assert.equal(summaryTitle, productTitle);
@@ -32,6 +32,6 @@ When('I confirm product={string} and quantity={int} at my purchase summary', asy
 });
 
 Then('Credit card payment option is displayed', async function () {
-  await this.driver.sleep(10000);
+  await this.driver.wait(until.elementLocated(By.className('wm-icon-credit-card-active'), 10000));
   await this.driver.findElement(By.className('wm-icon-credit-card-active')).isDisplayed();
 });
