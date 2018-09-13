@@ -10,13 +10,16 @@
 ###### Tested endpoint:
 - https://www.walmart.com.br
 
-###### Tested Features:
+###### Features:
 - Search for a product
 - Accessing searched product's page
 - Adding product to cart
 - Removing a product from cart
 - Buying a product 
-  Notes: Just checking if credit card option is displayed as performing a purchase was not required
+  --Notes: Just checking if credit card option is displayed as performing a purchase was not required
+
+###### Test cases:
+- 
   
 ###### Login observations
 - Login was considered a Background of each Feature.
