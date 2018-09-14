@@ -3,7 +3,7 @@
 ### Simple test scenarios of an e-commerce website using:
 - Cucumber
 - Selenium Webdriver
-- JavaScript - Node Version v10.10.0
+- JavaScript 
 
 ---
 
@@ -36,6 +36,6 @@
    - change First Name, login and Password in Background statements.
 
 ###### How to Execute Test
-Once npm is properly intalled, run
+Once npm is properly intalled, run:
  - To run all test at once: npm test 
  - To run a specific feature: npm test features/feature_file_name

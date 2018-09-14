@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/dripnasc/Ecommerce-BDDTesting.git"
   },
-  "keywords": ["cucumber", "ecommerce"],
+  "keywords": ["cucumber", "ecommerce", "selenium", "javascript"],
   "author": "Adriana Pereira do Nascimento",
   "license": "ISC",
   "bugs": {
