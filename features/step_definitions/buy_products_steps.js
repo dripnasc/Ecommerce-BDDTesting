@@ -5,6 +5,7 @@ const { By, until, key } = require('selenium-webdriver');
 
 //Scenario: Successful Purchase using credit card
 When('I access my cart page', async function () {
+  await this.waitOverlay();
   await this.driver.findElement(By.className('cart')).click();
   await this.driver.wait(until.elementLocated(By.className('my-cart-header-title')));
 });

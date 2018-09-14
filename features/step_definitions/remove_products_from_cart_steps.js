@@ -12,5 +12,5 @@ When('I click to remove the product', async function () {
 Then('I will be informed my cart is empty', async function () {
   await this.waitOverlay();
   const message = await this.driver.findElement(By.className('subtitle')).getText();
-  assert.equal(message, "Seu carrinho está vazio");
+  assert.strictEqual(message, "Seu carrinho está vazio");
 });
