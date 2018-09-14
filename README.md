@@ -38,6 +38,6 @@
 ###### How to Execute Test
 Once npm is properly intalled, run
  - To run all test at once: npm test 
- - To run a specific feature: npm test features/<feature file>
+ - To run a specific feature: npm test features/'<'Feature File Name'>'
   
   
