@@ -29,7 +29,7 @@
 ###### Login observations
 - It was needed to create an user account to perfom test. In this case, it was used:
    - [Temporarily E-mail Generator](https://en.getairmail.com)
-   - [CPF generator] (https://www.geradordecpf.org/)
+   - [CPF generator](https://www.geradordecpf.org/)
    - Valid Zip Code 
 - Login was considered a Background of each Scenario. Therefore, if prefered to use another user, it will be needed:
    - Make sure a shipping address is added for this user
@@ -38,6 +38,6 @@
 ###### How to Execute Test
 Once npm is properly intalled, run
  - To run all test at once: npm test 
- - To run a specific feature: npm test features/'<'Feature File Name'>'
+ - To run a specific feature: npm test features/<Feature File Name>
   
   
