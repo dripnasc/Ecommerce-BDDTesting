@@ -36,6 +36,6 @@
    - change First Name, login and Password in Background statements.
 
 ###### How to Execute Test
-Once npm is properly intalled, run:
+Once npm is properly intalled, run via npm:
  - To run all test at once: npm test 
  - To run a specific feature: npm test features/feature_file_name
