@@ -23,7 +23,8 @@
 - Successfully loading page of a searched product
 - Successfully adding several items of a product to cart
 - Successfully removing product from cart containing one product
-- Successful purchase using credit card
+- Successful purchase using credit card (1 item of a product)
+- Successful purchase using credit card (2 items of a product)
   
 ###### Login observations
 - It was needed to create an user account to perfom test. In this case, it was used:
