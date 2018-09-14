@@ -40,6 +40,5 @@
 2. Access the repository folder via terminal, and:
  - To run all test at once: npm test 
  - To run a specific feature: npm test features/feature_file_name
-  - To run Test Case 1 : npm test features/buy_products.feature
-  - To run Test Case 2 : npm test features/buy_products.feature
+  - To run Test Case 1 and Test Case 2: npm test features/buy_products.feature
   - To run Test Case 3 : npm test features/remove_products_from_cart.feature
