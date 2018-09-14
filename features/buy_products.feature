@@ -23,7 +23,7 @@ Feature: Buy a Product
     Examples:
       | product              | productTitle                                         | quantity |
       | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 1        |
-      | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
+    #  | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
 
 
 

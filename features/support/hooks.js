@@ -1,7 +1,11 @@
-const { After, AfterAll, Status } = require('cucumber');
+const { After, Before, Status } = require('cucumber');
 const fs = require('fs');
 const path = require('path');
 const sanitize = require('sanitize-filename');
+
+Before(function (scenario) {
+  console.log('Testing Scenario: ' + scenario.pickle.name);
+});
 
 After(function (scenario) {
   if (scenario.result.status === Status.FAILED) {
