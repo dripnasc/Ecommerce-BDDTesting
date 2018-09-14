@@ -9,6 +9,7 @@ Given('I am logged with {string} using login={string} and password={string}', as
   await this.waitOverlay();
   await this.driver.findElement(By.id('topbar-login-link')).click();
   this.driver.switchTo().frame('iframeLogin');
+  await this.waitOverlay();
   await this.driver.findElement(By.id('signinField')).sendKeys(login);
   await this.driver.findElement(By.id('password')).sendKeys(password);
   await this.driver.findElement(By.id('signinButtonSend')).click();

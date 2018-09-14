@@ -16,7 +16,7 @@
 - Adding product to cart
 - Removing a product from cart
 - Buying a product 
-  -- Note: Just checking if credit card option is displayed as performing a purchase was not required
+  - Note: Just checking if credit card option is displayed as performing a purchase was not required
 
 ###### Test scenarios:
 - Successful search of an existing product
@@ -28,16 +28,16 @@
   
 ###### Login observations
 - It was needed to create an user account to perfom test. In this case, it was used:
-  -- Temporarily E-mail Generator: https://en.getairmail.com
-  -- CPF generator: https://www.geradordecpf.org/
-  -- Valid Zip Code 
+   - [Temporarily E-mail Generator](https://en.getairmail.com)
+   - [CPF generator] (https://www.geradordecpf.org/)
+   - Valid Zip Code 
 - Login was considered a Background of each Scenario. Therefore, if prefered to use another user, it will be needed:
-  -- Make sure a shipping address is added for this user
-  -- change First Name, login and Password in Background statements.
+   - Make sure a shipping address is added for this user
+   - change First Name, login and Password in Background statements.
 
 ###### How to Execute Test
 Once npm is properly intalled, run
--- To run all test at once: npm test 
--- To run a specific feature: npm test features/<feature file>
+ - To run all test at once: npm test 
+ - To run a specific feature: npm test features/<feature file>
   
   
