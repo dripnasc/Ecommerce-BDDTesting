@@ -3,7 +3,7 @@
 ### Simple test scenarios of an e-commerce website using:
 - Cucumber
 - Selenium Webdriver
-- JavaScript
+- JavaScript - Node Version v10.10.0
 
 ---
 
