@@ -8,7 +8,7 @@
 ---
 
 ###### Tested endpoint:
-- https://www.walmart.com.br
+- [Tested e-commerce webiste](https://www.walmart.com.br)
 
 ###### Features:
 - Search for a product
@@ -39,5 +39,3 @@
 Once npm is properly intalled, run
  - To run all test at once: npm test 
  - To run a specific feature: npm test features/feature_file_name
-  
-  
