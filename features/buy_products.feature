@@ -5,7 +5,7 @@ Feature: Buy a Product
   Background:
     Given I am logged with "User" using login="75676513195" and password="pwdteste"
 
-  Scenario Outline: Successful Purchase using credit card
+  Scenario Outline: Successful purchase using credit card
     Given The product's name <product> is searched
     And I access the product's page
     And I add <quantity> items of the product to my cart
@@ -23,7 +23,7 @@ Feature: Buy a Product
     Examples:
       | product              | productTitle                                         | quantity |
       | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 1        |
-    #  | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
+      | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
 
 
 

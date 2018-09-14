@@ -1,6 +1,6 @@
 const assert = require('assert');
-const { Given, When, Then } = require('cucumber');
-const { By, until, key } = require('selenium-webdriver');
+const { Given } = require('cucumber');
+const { By } = require('selenium-webdriver');
 
 
 //Login Background
@@ -14,6 +14,6 @@ Given('I am logged with {string} using login={string} and password={string}', as
   await this.driver.findElement(By.id('signinButtonSend')).click();
   await this.waitOverlay();
   await this.driver.switchTo().defaultContent();
-  const userName = await this.driver.wait(until.elementLocated(By.id('suggestion-search'))).getAttribute('placeholder');
+  const userName = await this.driver.findElement(By.id('suggestion-search')).getAttribute('placeholder');
   assert.strictEqual(userName, 'Olá, ' + firstname + '. O que você procura?');
 });

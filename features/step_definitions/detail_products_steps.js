@@ -1,10 +1,10 @@
 const assert = require('assert');
-const { Given, When, Then } = require('cucumber');
-const { By, until, key } = require('selenium-webdriver');
+const { When, Then } = require('cucumber');
+const { By } = require('selenium-webdriver');
 
 
 //Scenario: Successfully loading page of a searched product
-When('I access the product\'s page', async function() {
+When('I access the product\'s page', async function () {
   await this.waitOverlay();
   await this.driver.findElement(By.className('product-title')).click();
   await this.driver.findElement(By.className('product-name')).isDisplayed();

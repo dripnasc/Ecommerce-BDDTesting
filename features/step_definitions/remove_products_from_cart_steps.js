@@ -1,6 +1,6 @@
 const assert = require('assert');
-const { Given, When, Then } = require('cucumber');
-const { By, until, key } = require('selenium-webdriver');
+const { When, Then } = require('cucumber');
+const { By } = require('selenium-webdriver');
 
 
 //Scenario Outline: Successfully removing product from cart containing one product
