@@ -7,6 +7,7 @@ const { By } = require('selenium-webdriver');
 When('I access the product\'s page', async function () {
   await this.waitOverlay();
   await this.driver.findElement(By.className('product-title')).click();
+  await this.waitOverlay();
   await this.driver.findElement(By.className('product-name')).isDisplayed();
 });
 

@@ -29,5 +29,5 @@ const world = function () {
 
 };
 
-setDefaultTimeout(50 * 1000);
+setDefaultTimeout(60 * 1000);
 setWorldConstructor(world);

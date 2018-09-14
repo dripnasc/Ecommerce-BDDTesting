@@ -7,6 +7,7 @@ const { By } = require('selenium-webdriver');
 When('I access my cart page', async function () {
   await this.waitOverlay();
   await this.driver.findElement(By.className('cart')).click();
+  await this.waitOverlay();
   await this.driver.findElement(By.className('my-cart-header-title'));
 });
 
