@@ -21,9 +21,9 @@ Feature: Buy a Product
     #And My purchase id is informed
 
     Examples:
-      | product              | productTitle                                         | quantity |
-      | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 1        |
-      | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
+      | product                   | productTitle                       | quantity |
+      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 1        |
+      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 2        |
 
 
 

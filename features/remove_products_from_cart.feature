@@ -14,5 +14,5 @@ Feature: Remove products to cart
     Then I will be informed my cart is empty
 
     Examples:
-      | product              | productTitle                                         | quantity |
-      | "sonho de valsa 1kg" | "Chocolate Bombom Sonho De Valsa Pacote 1kg - LACTA" | 2        |
+      | product                   | productTitle                       | quantity |
+      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 2        |

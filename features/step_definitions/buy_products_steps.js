@@ -18,8 +18,8 @@ When('I proceed to Check Out', async function () {
 
 When('I select a shipping address', async function () {
   await this.waitOverlay();
-  //await this.driver.findElement(By.css('body > div.wrapper > main > div > div > div.address-card.choose.view-address')).click();
-  await this.driver.findElement(By.className('address-data')).click();
+  await this.driver.findElement(By.css('body > div.wrapper > main > div > div > div.address-card.choose.view-address')).click();
+  //await this.driver.findElement(By.className('address-data')).click();
   await this.driver.findElement(By.css('[data-js="continue"]')).click();
 });
 
