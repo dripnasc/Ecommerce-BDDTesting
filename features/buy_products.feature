@@ -14,11 +14,6 @@ Feature: Buy a Product
     And I select a shipping address
     And I confirm product=<productTitle> and quantity=<quantity> at my purchase summary
     Then Credit card payment option is displayed
-    #The above steps were adjusted to the Challenging Test suggestion. The correct steps to a successfull purchase would be:
-    #And I fill credit card required information
-    #And I confirm the operation
-    #Then A confirmation message is shown
-    #And My purchase id is informed
 
     Examples:
       | product                   | productTitle                       | quantity |

@@ -16,7 +16,7 @@
 - Adding product to cart
 - Removing a product from cart
 - Buying a product 
-  - Note: Just checking if credit card option is displayed as performing a purchase was not required
+  - Note: Only checking if credit card option is displayed
 
 ###### Test scenarios:
 - Successful search of an existing product
@@ -33,12 +33,11 @@
    - Valid Zip Code 
 - Login was considered a Background of each Scenario. Therefore, if prefered to use another user, it will be needed:
    - Make sure a shipping address is added for this user
-   - change First Name, login and Password in Background statements.
+   - Change "Firstname", "Login" and "Password' in the following Background statement:
+     - Given I am logged with "Firstname" using login="Login" and password="Password"
 
 ###### How to Execute Test
 1. Install NPM and Node 
 2. Access the repository folder via terminal, and:
  - To run all test at once: npm test 
  - To run a specific feature: npm test features/feature_file_name
-  - To run Test Case 1 and Test Case 2: npm test features/buy_products.feature
-  - To run Test Case 3 : npm test features/remove_products_from_cart.feature
