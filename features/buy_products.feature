@@ -18,7 +18,7 @@ Feature: Buy a Product
     Examples:
       | product                   | productTitle                                | quantity |
       | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - LACTA" | 1        |
-     # | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - LACTA" | 2        |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - LACTA" | 2        |
 
 
 
