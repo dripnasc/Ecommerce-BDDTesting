@@ -10,5 +10,5 @@ Feature: Search for products
     Then The product <productTitle> is shown
 
     Examples:
-      | product                         | productTitle                                              |
-      | "marcador magic color 36 cores" | "Marcador Magic Color Série Ouro 36 Cores Sortidas 648-O" |
+      | product                   | productTitle                                |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - Lacta" |

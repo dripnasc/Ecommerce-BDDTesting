@@ -14,5 +14,5 @@ Feature: Remove products to cart
     Then I will be informed my cart is empty
 
     Examples:
-      | product                   | productTitle                       | quantity |
-      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 2        |
+      | product                   | productTitle                                | quantity |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - Lacta" | 2        |

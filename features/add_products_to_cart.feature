@@ -13,5 +13,5 @@ Feature: Add products to cart
     And The quantity <quantity> added is correctly shown in the cart
 
     Examples:
-      | product                | productTitle                                              | quantity |
-      | "caderno canson a4 98" | "Caderno Canson A4 Artbook One 98 Folhas - Referência:A4" | 5        |
+      | product                   | productTitle                        | quantity |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20" | 5        |

@@ -11,5 +11,5 @@ Feature: View details of a product
     Then The product's page is loaded informing the product name=<productName>
 
     Examples:
-      | product                         | productName                                               |
-      | "marcador magic color 36 cores" | "Marcador Magic Color Série Ouro 36 Cores Sortidas 648-O" |
+      | product                   | productName                                  |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - Lacta" |

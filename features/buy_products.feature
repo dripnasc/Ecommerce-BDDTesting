@@ -16,9 +16,9 @@ Feature: Buy a Product
     Then Credit card payment option is displayed
 
     Examples:
-      | product                   | productTitle                       | quantity |
-      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 1        |
-      | "achocolatado toddy 400g" | "Achocolatado Toddy 400g - Quaker" | 2        |
+      | product                   | productTitle                                | quantity |
+      | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - LACTA" | 1        |
+     # | "Diamante Negro 20g c/20" | "Chocolate Diamante Negro 20g c/20 - LACTA" | 2        |
 
 
 
